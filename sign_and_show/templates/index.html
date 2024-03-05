@@ -1,0 +1,27 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="../static/index/styles.css">
+
+<main class="SignMain">
+    <article>
+        <h1>Upload a PDF document</h1>
+
+        {{ error }}
+
+        <form action="" method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+            {{ form }}
+
+            <button>Sign</button>
+        </form>
+    </article>
+</main>   
+
+
+{% endblock %}
